@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/home.js" defer></script>
     <title>Document</title>
 </head>
 <body>
 
     <header>
         <div class="navbar">
-            <h1 class="title-home">LISTA DE COMPRAS</h1>
-            <img class="img-carrinho" src="/img/carrinho.webp" alt="">
+                <h1 class="title-home">LISTA DE COMPRAS</h1>
+                <div class="cart-container">
+                    <img id="link1" class="img-carrinho" src="/img/carrinho.webp" alt="">
+                    <span id="cart-count">0</span>
+                </div>
         </div>
     </header>
 
@@ -22,13 +26,55 @@
                 <h1 class="title-prom">EM PROMOÇÃO !</h1>
                 <div class="itens">
                     <div class="item">
-                        <img class="img-horizontal" src="/img/ps5.png" alt="">
+                        <img id="ps5" class="img-horizontal" src="/img/ps5.png" alt="">
+                        <div>
+                            <p style="font-size: 12px; color: brown;"> 
+                                <s>R$4899,90</s>
+                            </p>
+                            <p style="color: green;">
+                               <b>R$3000,00</b>
+                            </p>
+                        </div>
+                        <div class="quantity-control" id="ps5-control">
+                            <button class="decrease">-</button>
+                            <span class="quantity">0</span>
+                            <button class="increase">+</button>
+                            <button class="confirm">Confirmar</button>
+                        </div>
                     </div>
                     <div class="item">
-                        <img class="img-horizontal" src="/img/chocolate.png" alt="">
+                        <img id="chocolate" class="img-horizontal" src="/img/chocolate.png" alt="">
+                        <div>
+                            <p style="font-size: 12px; color: brown;"> 
+                                <s>R$9,90</s>
+                            </p>
+                            <p style="color: green;">
+                               <b>R$2,99</b>
+                            </p>
+                        </div>
+                        <div class="quantity-control" id="chocolate-control">
+                            <button class="decrease">-</button>
+                            <span class="quantity">0</span>
+                            <button class="increase">+</button>
+                            <button class="confirm">Confirmar</button>
+                        </div>
                     </div>
                     <div class="item">
-                        <img class="img-vertical" src="/img/remedio.png" alt="">
+                        <img id="remedio" class="img-vertical" src="/img/remedio.png" alt="">
+                        <div>
+                            <p style="font-size: 12px; color: brown;"> 
+                                <s>R$29,90</s>
+                            </p>
+                            <p style="color: green;">
+                               <b>R$10,00</b>
+                            </p>
+                        </div>
+                        <div class="quantity-control" id="remedio-control">
+                            <button class="decrease">-</button>
+                            <span class="quantity">0</span>
+                            <button class="increase">+</button>
+                            <button class="confirm">Confirmar</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -38,12 +84,27 @@
                 <div class="itens">
                     <div class="item">
                         <img class="img-horizontal" src="/img/abacate.png" alt="">
+                        <div>
+                            <p style="color: green;">
+                               <b>R$3,00 / kg</b>
+                            </p>
+                        </div>
                     </div>
                     <div class="item">
                         <img class="img-vertical" src="/img/doritos.png" alt="">
+                        <div>
+                            <p style="color: green;">
+                               <b>R$8,70</b>
+                            </p>
+                        </div>
                     </div>
                     <div class="item">
                         <img class="img-horizontal" src="/img/pera.png" alt="">
+                        <div>
+                            <p style="color: green;">
+                               <b>R$5,90 / kg</b>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -53,12 +114,27 @@
                 <div class="itens">
                     <div class="item">
                         <img class="img-vertical" src="/img/alexa.png" alt="">
+                        <div>
+                            <p style="color: green;">
+                               <b>R$210,00</b>
+                            </p>
+                        </div>
                     </div>
                     <div class="item">
                         <img class="img-vertical" src="/img/celular.png" alt="">
+                        <div>
+                            <p style="color: green;">
+                               <b>R$2950,00</b>
+                            </p>
+                        </div>
                     </div>
                     <div class="item">
                         <img class="img-vertical" src="/img/notebook.png" alt="">
+                        <div>
+                            <p style="color: green;">
+                               <b>R$3625,00</b>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -68,12 +144,27 @@
                 <div class="itens">
                     <div class="item">
                         <img class="img-vertical" src="/img/gatoraide.png" alt="">
+                        <div>
+                            <p style="color: green;">
+                               <b>R$8,99</b>
+                            </p>
+                        </div>
                     </div>
                     <div class="item">
                         <img class="img-vertical" src="/img/maquiagem.png" alt="">
+                        <div>
+                            <p style="color: green;">
+                               <b>R$10,00</b>
+                            </p>
+                        </div>
                     </div>
                     <div class="item">
                         <img class="img-vertical" src="/img/remedio.png" alt="">
+                        <div>
+                            <p style="color: green;">
+                               <b>R$15,00</b>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

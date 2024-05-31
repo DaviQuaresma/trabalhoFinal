@@ -47,13 +47,13 @@ header{
 }
 
 .item{
-    border-radius: 5%;
+    border-radius: 5px;
 }
 
 .img-horizontal{
     cursor: pointer;
     transition: transform 500ms;
-    border-radius: 5%;
+    border-radius: 5px;
     width: 13rem;
 }
 
@@ -66,7 +66,6 @@ header{
 
 /* Corrigido a sintaxe para o hover */
 .img-horizontal:hover, .img-vertical:hover {
-    transform: scale(1.1); /* Ajuste o valor conforme necessário */
     border: 4px rgb(182, 132, 182) solid;;
 }
 
@@ -78,4 +77,42 @@ header{
 
 .img-carrinho:hover{
     transform: rotate(30deg); /* Ajuste o valor conforme necessário */
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.quantity-control .decrease,
+.quantity-control .increase,
+.quantity-control .confirm {
+    cursor: pointer;
+    padding: 5px;
+    margin: 0 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.quantity-control .quantity {
+    width: 30px;
+    text-align: center;
+}
+
+.cart-container {
+    position: relative;
+    display: inline-block;
+}
+
+#cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 14px;
 }
