@@ -1,18 +1,42 @@
-function calcDebt(){
-    const button = document.getElementById('calcDebt')
+function calcDebt() {
+    const form = document.getElementById('form'); 
 
-    button.addEventListener('click', () => {
-        console.log("Clicado")
-    })
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const calcFields = document.getElementsByClassName('calcField');
+        const nameFields = document.getElementsByClassName('nameField');
 
+        const debts = [];
+
+        for (let i = 0; i < calcFields.length; i++) {
+            const value = calcFields[i].value;
+            const numericValue = parseFloat(value.replace(/[^0-9.-]+/g, ''));
+            if (!numericValue || null){
+                alert(`Não podemos calcular campos vazios ou negativos, favor remover o campo vazio ou sem nome`)
+            }else if (!isNaN(numericValue)) {
+                debts.push({ name: nameFields[i].value, value: numericValue });
+            }
+        }
+
+        console.log(debts);
+
+        if (debts.length > 0) {
+            let maxDebt = debts[0];
+            for (let i = 1; i < debts.length; i++) {
+                if (debts[i].value > maxDebt.value) {
+                    maxDebt = debts[i];
+                }
+            }
+            alert(`
+            
+            Nome da dívida: ${maxDebt.name}
+            Maior valor: R$${maxDebt.value}
+            
+            `);
+        } else {
+            console.log("Nenhum valor numérico encontrado.");
+        }
+    });
 }
 
-// Esta função servira para calcular os valores de todas as contas que forem geradas, este botão já está em conexão com o botão do front, 
-// preciso descobrircomo ele vai pegar os valores de cada campo e junta-los dentro de um Array, é bom ter uma regra para tirar qualquer 
-// tipo de caracter que não for numero, apóes isso vc precisará fazer algo como se fosse um compare entre os valores dentro do Array, pode
-// simplesmente fazer como eu mostrei ontem "array.sort().reverse()", trazendo para nós o maior valor do array, mas precisamos lembrar que ele
-// tem que estar vinculado com um id por exemplo ou o nome do item que o cara colocou, para retornarmos o nome da conta mais alta dele. 
-// Isso é só um exemplo, acho que tem mais coisas que eu posso fazer, mas se quiser ir adiantando algo, só mexer.
-
-
-calcDebt()
+calcDebt();
