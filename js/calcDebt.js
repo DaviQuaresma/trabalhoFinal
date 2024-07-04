@@ -128,7 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const addDebtButton = document.getElementById('addDebt');
         const newDebtRow = document.createElement('div');
         newDebtRow.className = 'row mb-3';
-
         newDebtRow.innerHTML = `
             <div class="col-7">
                 <input type="text" class="form-control nameField" placeholder="Nome da dívida" aria-label="Nome da dívida">
@@ -140,14 +139,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 <button type="button" class="btn btn-danger w-100">Remover</button>
             </div>
         `;
-
-        form.insertBefore(newDebtRow, addDebtButton.parentNode);
-
+        form.insertBefore(newDebtRow, addDebtButton); // Adiciona antes do botão
+    
         const removeButton = newDebtRow.querySelector('.btn-danger');
         removeButton.addEventListener('click', () => {
             newDebtRow.remove();
         });
-    }
+    }    
 
     document.getElementById('addDebt').addEventListener('click', addDebtField);
 
